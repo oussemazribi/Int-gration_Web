@@ -14,6 +14,7 @@ class ParticipationController extends Controller
 
         $Participation = new Participation();
         $user = $this->getUser();
+
         $em = $this->getDoctrine()->getManager();
         $idc=$em->getRepository('CompetitionBundle:Competition')->find($id);
         $comp=$em->getRepository('CompetitionBundle:Competition')->findBy(array('idcompetition'=>$id));
